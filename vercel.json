@@ -1,5 +1,11 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/api/redirect" }
-  ]
+    "functions": {
+          "redirect.js": {
+                  "memory": 128,
+                  "maxDuration": 10
+          }
+    },
+    "rewrites": [
+          { "source": "/", "destination": "/redirect" }
+    ]
 }
